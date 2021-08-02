@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Cost Calculator and Order Wizard">
+	<meta name="author" content="UWS">
+	<title>COSTY | Cost Calculator and Order Wizard</title>
+
+	<!-- Favicon -->
+	<link href="img/favicon.png" rel="shortcut icon">
+
+	<!-- Google Fonts - Poppins, Karla -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Karla:300,400,500,600,700" rel="stylesheet">
+
+	<!-- Font Awesome CSS -->
+	<link href="vendor/fontawesome/css/all.min.css" rel="stylesheet">
+
+	<!-- Custom Font Icons -->
+	<link href="vendor/icomoon/css/iconfont.min.css" rel="stylesheet">
+
+	<!-- Vendor CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="vendor/animate/css/animate.min.css" rel="stylesheet">
+	<link href="vendor/dmenu/css/menu.css" rel="stylesheet">
+	<link href="vendor/hamburgers/css/hamburgers.min.css" rel="stylesheet">
+	<link href="vendor/mmenu/css/mmenu.min.css" rel="stylesheet">
+	<link href="vendor/range-slider/css/ion.rangeSlider.css" rel="stylesheet">
+	<link href="vendor/magnific-popup/css/magnific-popup.css" rel="stylesheet">
+	<link href="vendor/float-labels/css/float-labels.min.css" rel="stylesheet">
+
+	<!-- Main CSS -->
+	<link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<!-- Preloader -->
+	<div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div>
+	<!-- Preloader End -->
+
+	<!-- Page -->
+	<div id="page">
+		<!-- Header -->
+		<header class="main-header sticky">
+			<a href="#menu" class="btn-mobile">
+				<div class="hamburger hamburger--spin" id="hamburger">
+					<div class="hamburger-box">
+						<div class="hamburger-inner"></div>
+					</div>
+				</div>
+			</a>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-6">
+						<div id="logo">
+							<h1><a href="index.html" title="Costy">Costy</a></h1>
+						</div>
+					</div>
+					<div class="col-lg-9 col-6">
+						<ul id="menuIcons">
+							<li><a href="#"><i class="icon icon-support"></i></a></li>
+							<li><a href="#"><i class="icon icon-shopping-cart2"></i></a></li>
+						</ul>
+						<!-- Menu -->
+						<nav id="menu" class="main-menu">
+							<ul>
+								<li><span><a href="index.html">Home</a></span></li>
+								<li>
+									<span><a href="#">Calculators <i class="fa fa-chevron-down"></i></a></span>
+									<ul>
+										<li><a href="calculator-1.html">Demo 1 - More dropdowns</a></li>
+										<li><a href="calculator-2.html">Demo 2 - Single items</a></li>
+										<li><a href="calculator-3.html">Demo 3 - Single dropdown</a></li>
+										<li><a href="calculator-4.html">Demo 4 - Without submit</a></li>
+									</ul>
+								</li>
+								<li>
+									<span><a href="#">Extra Elements <i class="fa fa-chevron-down"></i></a></span>
+									<ul>
+										<li><a href="php/phpmailer/email.html" target="_blank">Email Confirmation</a></li>
+										<li>
+											<span><a href="#">PDF Summary</a></span>
+											<ul>
+												<li><a href="pdf/order-usd-left.pdf" target="_blank">USD on the left</a></li>
+												<li><a href="pdf/order-usd-right.pdf" target="_blank">USD on the right</a></li>
+												<li><a href="pdf/order-eur-spec-chars.pdf" target="_blank">EUR with spec.chars.</a></li>
+											</ul>
+										</li>
+										<li><a href="javascript:;" id="openSimpleMailSummaryImage">Simple Mail Summary</a></li>
+									</ul>
+								</li>
+								<li><span><a href="faq.html">Faq</a></span></li>
+								<li><span><a href="contacts.html">Contacts</a></span></li>
+							</ul>
+						</nav>
+						<!-- Menu End -->
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- Header End -->
+
+		<!-- Sub Header -->
+		<div class="sub-header">
+			<div class="container">
+				<h1>Faq</h1>
+			</div>
+		</div>
+		<!-- Sub Header End -->
+
+		<main>
+			<!-- Faq -->
+			<div class="faq">
+				<div class="container">
+					<div class="row">
+						<!-- Faq Navigation -->
+						<aside class="col-lg-3" id="sidebar">
+							<div id="faqNavContainer" class="theiaStickySidebar">
+								<ul id="faqNav">
+									<li><a href="#topic1" class="active nice-scroll-faq">Main Topic 1</a></li>
+									<li><a href="#topic2" class="nice-scroll-faq">Main Topic 2</a></li>
+									<li><a href="#topic3" class="nice-scroll-faq">Main Topic 3</a></li>
+									<li><a href="#topic4" class="nice-scroll-faq">Main Topic 4</a></li>
+									<li><a href="#topic5" class="nice-scroll-faq">Main Topic 5</a></li>
+								</ul>
+							</div>
+						</aside>
+						<!-- Faq Navigation End -->
+						<!-- Faq Cards -->
+						<div class="col-lg-9" id="mainContent">
+							<!-- Topic 1 -->
+							<h3>Main Topic 1</h3>
+							<div role="tablist" class="faq-accordion" id="topic1">
+								<!-- Card 1 -->
+								<div class="card">
+									<div class="card-header" role="tab">
+										<h4 class="mb-0">
+											<a data-toggle="collapse" href="#subTopic1" aria-expanded="true"><i class="indicator icon icon-minus"></i>Sub Topic 1.1</a>
+										</h4>
+									</div>
+									<div id="subTopic1" class="collapse show" role="tabpanel" data-parent="#topic1">
+										<div class="card-body">
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+										</div>
+									</div>
+								</div>
+								<!-- Card 2 -->
+								<div class="card">
+									<div class="card-header" role="tab">
+										<h4 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#subTopic2" aria-expanded="false"><i class="indicator icon icon-plus"></i>Sub Topic 1.2</a>
+										</h4>
+									</div>
+									<div id="subTopic2" class="collapse" role="tabpanel" data-parent="#topic1">
+										<div class="card-body">
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+										</div>
+									</div>
+								</div>
+								<!-- Card 3 -->
+								<div class="card">
+									<div class="card-header" role="tab">
+										<h4 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#subTopic3" aria-expanded="false"><i class="indicator icon icon-plus"></i>Sub Topic 1.3</a>
+										</h4>
+									</div>
+									<div id="subTopic3" class="collapse" role="tabpanel" data-parent="#topic1">
+										<div class="card-body">
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Topic 2 -->
+							<h3>Main Topic 2</h3>
+							<div role="tablist" class="faq-accordion" id="topic2">
+								<!-- Card 4 -->
+								<div class="card">
+									<div class="card-header" role="tab">
+										<h4 class="mb-0">
+											<a data-toggle="collapse" href="#subTopic4" aria-expanded="true"><i class="indicator icon icon-plus"></i>Sub Topic 2.1</a>
+										</h4>
+									</div>
+									<div id="subTopic4" class="collapse" role="tabpanel" data-parent="#topic2">
+										<div class="card-body">
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+										</div>
+									</div>
+								</div>
+								<!-- Card 5 -->
+								<div class="card">
+									<div class="card-header" role="tab">
+										<h4 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#subTopic5" aria-expanded="false"><i class="indicator icon icon-plus"></i>Sub Topic 2.2</a>
+										</h4>
+									</div>
+									<div id="subTopic5" class="collapse" role="tabpanel" data-parent="#topic2">
+										<div class="card-body">
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+										</div>
+									</div>
+								</div>
+								<!-- Card 6 -->
+								<div class="card">
+									<div class="card-header" role="tab">
+										<h4 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#subTopic6" aria-expanded="false"><i class="indicator icon icon-plus"></i>Sub Topic 2.3</a>
+										</h4>
+									</div>
+									<div id="subTopic6" class="collapse" role="tabpanel" data-parent="#topic2">
+										<div class="card-body">
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Topic 3 -->
+							<h3>Main Topic 3</h3>
+							<div role="tablist" class="faq-accordion" id="topic3">
+								<!-- Card 7 -->
+								<div class="card">
+									<div class="card-header" role="tab">
+										<h4 class="mb-0">
+											<a data-toggle="collapse" href="#subTopic7" aria-expanded="true"><i class="indicator icon icon-plus"></i>Sub Topic 3.1</a>
+										</h4>
+									</div>
+									<div id="subTopic7" class="collapse" role="tabpanel" data-parent="#topic3">
+										<div class="card-body">
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+										</div>
+									</div>
+								</div>
+								<!-- Card 8 -->
+								<div class="card">
+									<div class="card-header" role="tab">
+										<h4 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#subTopic8" aria-expanded="false"><i class="indicator icon icon-plus"></i>Sub Topic 3.2</a>
+										</h4>
+									</div>
+									<div id="subTopic8" class="collapse" role="tabpanel" data-parent="#topic3">
+										<div class="card-body">
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+										</div>
+									</div>
+								</div>
+								<!-- Card 9 -->
+								<div class="card">
+									<div class="card-header" role="tab">
+										<h4 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#subTopic9" aria-expanded="false"><i class="indicator icon icon-plus"></i>Sub Topic 3.3</a>
+										</h4>
+									</div>
+									<div id="subTopic9" class="collapse" role="tabpanel" data-parent="#topic3">
+										<div class="card-body">
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Topic 4 -->
+							<h3>Main Topic 4</h3>
+							<div role="tablist" class="faq-accordion" id="topic4">
+								<!-- Card 10 -->
+								<div class="card">
+									<div class="card-header" role="tab">
+										<h4 class="mb-0">
+											<a data-toggle="collapse" href="#subTopic10" aria-expanded="true"><i class="indicator icon icon-plus"></i>Sub Topic 4.1</a>
+										</h4>
+									</div>
+									<div id="subTopic10" class="collapse" role="tabpanel" data-parent="#topic4">
+										<div class="card-body">
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+										</div>
+									</div>
+								</div>
+								<!-- Card 11 -->
+								<div class="card">
+									<div class="card-header" role="tab">
+										<h4 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#subTopic11" aria-expanded="false"><i class="indicator icon icon-plus"></i>Sub Topic 4.2</a>
+										</h4>
+									</div>
+									<div id="subTopic11" class="collapse" role="tabpanel" data-parent="#topic4">
+										<div class="card-body">
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+										</div>
+									</div>
+								</div>
+								<!-- Card 12 -->
+								<div class="card">
+									<div class="card-header" role="tab">
+										<h4 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#subTopic12" aria-expanded="false"><i class="indicator icon icon-plus"></i>Sub Topic 4.3</a>
+										</h4>
+									</div>
+									<div id="subTopic12" class="collapse" role="tabpanel" data-parent="#topic4">
+										<div class="card-body">
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Topic 5 -->
+							<h3>Main Topic 5</h3>
+							<div role="tablist" class="faq-accordion" id="topic5">
+								<!-- Card 13 -->
+								<div class="card">
+									<div class="card-header" role="tab">
+										<h4 class="mb-0">
+											<a data-toggle="collapse" href="#subTopic13" aria-expanded="true"><i class="indicator icon icon-plus"></i>Sub Topic 5.1</a>
+										</h4>
+									</div>
+									<div id="subTopic13" class="collapse" role="tabpanel" data-parent="#topic5">
+										<div class="card-body">
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+										</div>
+									</div>
+								</div>
+								<!-- Card 14 -->
+								<div class="card">
+									<div class="card-header" role="tab">
+										<h4 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#subTopic14" aria-expanded="false"><i class="indicator icon icon-plus"></i>Sub Topic 4.2</a>
+										</h4>
+									</div>
+									<div id="subTopic14" class="collapse" role="tabpanel" data-parent="#topic5">
+										<div class="card-body">
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+										</div>
+									</div>
+								</div>
+								<!-- Card 15 -->
+								<div class="card">
+									<div class="card-header" role="tab">
+										<h4 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#subTopic15" aria-expanded="false"><i class="indicator icon icon-plus"></i>Sub Topic 4.3</a>
+										</h4>
+									</div>
+									<div id="subTopic15" class="collapse" role="tabpanel" data-parent="#topic5">
+										<div class="card-body">
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+											<p>
+												Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+												Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Quia consequuntur magni dolores eos qui ratione voluptatem sequi
+												nesciunt.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Topics End  -->
+						</div>
+						<!-- Faq Cards End -->
+					</div>
+				</div>
+			</div>
+			<!-- Faq End -->
+		</main>
+		<!-- Main End -->
+
+		<!-- Footer -->
+		<footer class="main-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<h5 class="footer-heading">Menu Links</h5>
+						<ul class="list-unstyled nav-links">
+							<li><i class="fas fa-angle-right"></i> <a href="index.html" class="footer-link">Home</a></li>
+							<li><i class="fas fa-angle-right"></i> <a href="faq.html" class="footer-link">FAQ</a></li>
+							<li><i class="fas fa-angle-right"></i> <a href="contacts.html" class="footer-link">Contacts</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<h5 class="footer-heading">Order Wizard</h5>
+						<ul class="list-unstyled nav-links">
+							<li><i class="fas fa-angle-right"></i> <a href="calculator-1.html" class="footer-link">Calculator Demo 1</a></li>
+							<li><i class="fas fa-angle-right"></i> <a href="calculator-2.html" class="footer-link">Calculator Demo 2</a></li>
+							<li><i class="fas fa-angle-right"></i> <a href="calculator-3.html" class="footer-link">Calculator Demo 3</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<h5 class="footer-heading">Contacts</h5>
+						<ul class="list-unstyled contact-links">
+							<li><i class="icon icon-map-marker"></i><a href="https://goo.gl/maps/vKgGyZe2JSRLDnYH6" class="footer-link" target="_blank">Address: 1234 Street Name, City Name, USA</a>
+							</li>
+							<li><i class="icon icon-envelope3"></i><a href="mailto:info@yourdomain.com" class="footer-link">Mail: info@yourdomain.com</a></li>
+							<li><i class="icon icon-phone2"></i><a href="tel:+3630123456789" class="footer-link">Phone: +3630123456789</a></li>
+						</ul>
+					</div>
+					<div class="col-md-2">
+						<h5 class="footer-heading">Follow Us</h5>
+						<ul class="list-unstyled social-links">
+							<li><a href="https://facebook.com" class="social-link" target="_blank"><i class="icon icon-facebook"></i></a></li>
+							<li><a href="https://twitter.com" class="social-link" target="_blank"><i class="icon icon-twitter"></i></a></li>
+							<li><a href="https://instagram.com" class="social-link" target="_blank"><i class="icon icon-instagram"></i></a></li>
+							<li><a href="https://pinterest.com" class="social-link" target="_blank"><i class="icon icon-pinterest"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-8">
+						<ul id="subFooterLinks">
+							<li><a href="https://themeforest.net/user/ultimatewebsolutions" target="_blank">With <i class="fa fa-heart pulse"></i> by UWS</a></li>
+							<li><a href="pdf/terms.pdf" target="_blank">Terms and conditions</a></li>
+							<li><a href="faq.html">Faq</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<div id="copy">© 2021 Costy</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- Footer End -->
+	</div>
+	<!-- Page End -->
+
+	<!-- Back to top button -->
+	<div id="toTop"><i class="fa fa-chevron-up"></i></div>
+
+	<!-- Vendor Javascript Files -->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="vendor/easing/js/easing.min.js"></script>
+	<script src="vendor/parsley/js/parsley.min.js"></script>
+	<script src="vendor/nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="vendor/range-slider/js/ion.rangeSlider.min.js"></script>
+	<script src="vendor/price-format/js/jquery.priceformat.min.js"></script>
+	<script src="vendor/theia-sticky-sidebar/js/ResizeSensor.min.js"></script>
+	<script src="vendor/theia-sticky-sidebar/js/theia-sticky-sidebar.min.js"></script>
+	<script src="vendor/mmenu/js/mmenu.min.js"></script>
+	<script src="vendor/magnific-popup/js/jquery.magnific-popup.min.js"></script>
+	<script src="vendor/float-labels/js/float-labels.min.js"></script>
+
+	<!-- Main Javascript File -->
+	<script src="js/scripts.js"></script>
+
+</body>
+
+</html>

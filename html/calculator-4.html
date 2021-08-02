@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Cost Calculator and Order Wizard">
+	<meta name="author" content="UWS">
+	<title>COSTY | Cost Calculator and Order Wizard</title>
+
+	<!-- Favicon -->
+	<link href="img/favicon.png" rel="shortcut icon">
+
+	<!-- Google Fonts - Poppins, Karla -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Karla:300,400,500,600,700" rel="stylesheet">
+
+	<!-- Font Awesome CSS -->
+	<link href="vendor/fontawesome/css/all.min.css" rel="stylesheet">
+
+	<!-- Custom Font Icons -->
+	<link href="vendor/icomoon/css/iconfont.min.css" rel="stylesheet">
+
+	<!-- Vendor CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="vendor/animate/css/animate.min.css" rel="stylesheet">
+	<link href="vendor/dmenu/css/menu.css" rel="stylesheet">
+	<link href="vendor/hamburgers/css/hamburgers.min.css" rel="stylesheet">
+	<link href="vendor/mmenu/css/mmenu.min.css" rel="stylesheet">
+	<link href="vendor/range-slider/css/ion.rangeSlider.css" rel="stylesheet">
+	<link href="vendor/magnific-popup/css/magnific-popup.css" rel="stylesheet">
+
+	<!-- Main CSS -->
+	<link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<!-- Preloader -->
+	<div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div>
+	<!-- Preloader End -->
+
+	<!-- Page -->
+	<div id="page">
+		<!-- Header -->
+		<header class="main-header sticky">
+			<a href="#menu" class="btn-mobile">
+				<div class="hamburger hamburger--spin" id="hamburger">
+					<div class="hamburger-box">
+						<div class="hamburger-inner"></div>
+					</div>
+				</div>
+			</a>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-6">
+						<div id="logo">
+							<h1><a href="index.html" title="Costy">Costy</a></h1>
+						</div>
+					</div>
+					<div class="col-lg-9 col-6">
+						<ul id="menuIcons">
+							<li><a href="#"><i class="icon icon-support"></i></a></li>
+							<li><a href="#"><i class="icon icon-shopping-cart2"></i></a></li>
+						</ul>
+						<!-- Menu -->
+						<nav id="menu" class="main-menu">
+							<ul>
+								<li><span><a href="index.html">Home</a></span></li>
+								<li>
+									<span><a href="#">Calculators <i class="fa fa-chevron-down"></i></a></span>
+									<ul>
+										<li><a href="calculator-1.html">Demo 1 - More dropdowns</a></li>
+										<li><a href="calculator-2.html">Demo 2 - Single items</a></li>
+										<li><a href="calculator-3.html">Demo 3 - Single dropdown</a></li>
+										<li><a href="calculator-4.html">Demo 4 - Without submit</a></li>
+									</ul>
+								</li>
+								<li>
+									<span><a href="#">Extra Elements <i class="fa fa-chevron-down"></i></a></span>
+									<ul>
+										<li><a href="php/phpmailer/email.html" target="_blank">Email Confirmation</a></li>
+										<li>
+											<span><a href="#">PDF Summary</a></span>
+											<ul>
+												<li><a href="pdf/order-usd-left.pdf" target="_blank">USD on the left</a></li>
+												<li><a href="pdf/order-usd-right.pdf" target="_blank">USD on the right</a></li>
+												<li><a href="pdf/order-eur-spec-chars.pdf" target="_blank">EUR with spec.chars.</a></li>
+											</ul>
+										</li>
+										<li><a href="javascript:;" id="openSimpleMailSummaryImage">Simple Mail Summary</a></li>
+									</ul>
+								</li>
+								<li><span><a href="faq.html">Faq</a></span></li>
+								<li><span><a href="contacts.html">Contacts</a></span></li>
+							</ul>
+						</nav>
+						<!-- Menu End -->
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- Header End -->
+
+		<!-- Sub Header -->
+		<div class="sub-header">
+			<div class="container">
+				<h1>Calculator Demo 4</h1>
+			</div>
+		</div>
+		<!-- Sub Header End -->
+
+		<main>
+			<!-- Order  -->
+			<div class="order">
+				<div class="container">
+					<!-- Form -->
+					<div class="row">
+						<div class="col-lg-8" id="mainContent">
+							<!-- Calculator Area -->
+							<div id="optionGroup1" class="row option-box">
+								<div class="price-box"><sup>$</sup>49</div>
+								<div class="option-box-header">
+									<h3>Option 1</h3>
+									<p>Please define the quantity of the needed Option 1. Price is $49 /qty. Extra service is $9. </p>
+								</div>
+								<div class="col-md-8">
+									<div class="row">
+										<div class="col-md-9 col-sm-9">
+											<input id="option1SingleRangeSlider" type="text" value="" />
+										</div>
+										<div class="col-md-3 col-sm-3">
+											<input id="option1SingleQty" type="text" class="qty-input form-control" name="optionGroup1Qty" value="0" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<input type="hidden" name="extraOption1Title" value="Option 1 Extra" />
+									<input type="checkbox" id="extraOption1" class="inp-cbx" name="extraOption1" value="9.00" />
+									<label class="cbx" for="extraOption1">
+										<span>
+											<svg width="12px" height="10px" viewbox="0 0 12 10">
+												<polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+											</svg>
+										</span>
+										<span id="extraOption1Title">Option 1 Extra</span>
+									</label>
+								</div>
+							</div>
+							<div id="optionGroup2" class="row option-box">
+								<div class="price-box"><sup>$</sup>129</div>
+								<div class="option-box-header">
+									<h3>Option 2</h3>
+									<p>Please define the quantity of the needed Option 2. Price is $129 /qty. </p>
+								</div>
+								<div class="col-md-12">
+									<div class="row">
+										<div class="col-md-10 col-sm-10">
+											<input id="option2SingleRangeSlider" type="text" value="" />
+										</div>
+										<div class="col-md-2 col-sm-2">
+											<input id="option2SingleQty" type="text" class="qty-input form-control" name="optionGroup2Qty" value="0" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="optionGroup3" class="row option-box">
+								<div class="price-box"><sup>$</sup>150</div>
+								<div class="option-box-header">
+									<h3>Option 3</h3>
+									<p>Please define the quantity of the needed Option 3. Price is $150 /qty. </p>
+								</div>
+								<div class="col-md-12">
+									<div class="row">
+										<div class="col-md-10 col-sm-10">
+											<input id="option3SingleRangeSlider" type="text" value="" />
+										</div>
+										<div class="col-md-2 col-sm-2">
+											<input id="option3SingleQty" type="text" class="qty-input form-control" name="optionGroup3Qty" value="0" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Calculator Area End -->
+						</div>
+						<div class="col-lg-4" id="sidebar">
+							<!-- Order Container -->
+							<div id="orderContainer" class="theiaStickySidebar">
+								<div class="row">
+									<div class="col-md-12">
+										<input type="hidden" id="subSum1" name="subSum1" value="0" />
+										<input type="hidden" id="subSum2" name="subSum2" value="0" />
+										<input type="hidden" id="subSum3" name="subSum3" value="0" />
+										<input type="hidden" id="totalDue" name="totalDue" value="0" />
+										<h3>Summary</h3>
+										<ul id="orderSumList">
+											<li id="option1SingleSum"></li>
+											<li id="extraOption1Sum"></li>
+											<li id="option2SingleSum"></li>
+											<li id="option3SingleSum"></li>
+										</ul>
+										<div class="row total-container">
+											<div class="col-6 p-0">
+												<input type="text" id="totalTitle" class="summaryInput" name="totallabel" value="" disabled />
+											</div>
+											<div class="col-6 p-0">
+												<input type="text" id="total" class="summaryInput" name="total" value="0" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row footer">
+									<div class="col-lg-12 text-left">
+										<small>&copy; 2021 Your Company.</small>
+									</div>
+								</div>
+							</div>
+							<!-- Order Container End -->
+						</div>
+					</div>
+					<!-- Form End -->
+				</div>
+			</div>
+			<!-- Order End -->
+		</main>
+		<!-- Main End -->
+
+		<!-- Footer -->
+		<footer class="main-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<h5 class="footer-heading">Menu Links</h5>
+						<ul class="list-unstyled nav-links">
+							<li><i class="fas fa-angle-right"></i> <a href="index.html" class="footer-link">Home</a></li>
+							<li><i class="fas fa-angle-right"></i> <a href="faq.html" class="footer-link">FAQ</a></li>
+							<li><i class="fas fa-angle-right"></i> <a href="contacts.html" class="footer-link">Contacts</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<h5 class="footer-heading">Order Wizard</h5>
+						<ul class="list-unstyled nav-links">
+							<li><i class="fas fa-angle-right"></i> <a href="calculator-1.html" class="footer-link">Calculator Demo 1</a></li>
+							<li><i class="fas fa-angle-right"></i> <a href="calculator-2.html" class="footer-link">Calculator Demo 2</a></li>
+							<li><i class="fas fa-angle-right"></i> <a href="calculator-3.html" class="footer-link">Calculator Demo 3</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<h5 class="footer-heading">Contacts</h5>
+						<ul class="list-unstyled contact-links">
+							<li><i class="icon icon-map-marker"></i><a href="https://goo.gl/maps/vKgGyZe2JSRLDnYH6" class="footer-link" target="_blank">Address: 1234 Street Name, City Name, USA</a>
+							</li>
+							<li><i class="icon icon-envelope3"></i><a href="mailto:info@yourdomain.com" class="footer-link">Mail: info@yourdomain.com</a></li>
+							<li><i class="icon icon-phone2"></i><a href="tel:+3630123456789" class="footer-link">Phone: +3630123456789</a></li>
+						</ul>
+					</div>
+					<div class="col-md-2">
+						<h5 class="footer-heading">Follow Us</h5>
+						<ul class="list-unstyled social-links">
+							<li><a href="https://facebook.com" class="social-link" target="_blank"><i class="icon icon-facebook"></i></a></li>
+							<li><a href="https://twitter.com" class="social-link" target="_blank"><i class="icon icon-twitter"></i></a></li>
+							<li><a href="https://instagram.com" class="social-link" target="_blank"><i class="icon icon-instagram"></i></a></li>
+							<li><a href="https://pinterest.com" class="social-link" target="_blank"><i class="icon icon-pinterest"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-8">
+						<ul id="subFooterLinks">
+							<li><a href="https://themeforest.net/user/ultimatewebsolutions" target="_blank">With <i class="fa fa-heart pulse"></i> by UWS</a></li>
+							<li><a href="pdf/terms.pdf" target="_blank">Terms and conditions</a></li>
+							<li><a href="faq.html">Faq</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<div id="copy">© 2021 Costy</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- Footer End -->
+	</div>
+	<!-- Page End -->
+
+	<!-- Back to top button -->
+	<div id="toTop"><i class="fa fa-chevron-up"></i></div>
+
+	<!-- Vendor Javascript Files -->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="vendor/easing/js/easing.min.js"></script>
+	<script src="vendor/parsley/js/parsley.min.js"></script>
+	<script src="vendor/nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="vendor/range-slider/js/ion.rangeSlider.min.js"></script>
+	<script src="vendor/price-format/js/jquery.priceformat.min.js"></script>
+	<script src="vendor/theia-sticky-sidebar/js/ResizeSensor.min.js"></script>
+	<script src="vendor/theia-sticky-sidebar/js/theia-sticky-sidebar.min.js"></script>
+	<script src="vendor/mmenu/js/mmenu.min.js"></script>
+	<script src="vendor/magnific-popup/js/jquery.magnific-popup.min.js"></script>
+
+	<!-- Main Javascript File -->
+	<script src="js/scripts-4.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Cost Calculator and Order Wizard">
+	<meta name="author" content="UWS">
+	<title>COSTY | Cost Calculator and Order Wizard</title>
+
+	<!-- Favicon -->
+	<link href="img/favicon.png" rel="shortcut icon">
+
+	<!-- Google Fonts - Poppins, Karla -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Karla:300,400,500,600,700" rel="stylesheet">
+
+	<!-- Font Awesome CSS -->
+	<link href="vendor/fontawesome/css/all.min.css" rel="stylesheet">
+
+	<!-- Custom Font Icons -->
+	<link href="vendor/icomoon/css/iconfont.min.css" rel="stylesheet">
+
+	<!-- Vendor CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="vendor/animate/css/animate.min.css" rel="stylesheet">
+	<link href="vendor/dmenu/css/menu.css" rel="stylesheet">
+	<link href="vendor/hamburgers/css/hamburgers.min.css" rel="stylesheet">
+	<link href="vendor/mmenu/css/mmenu.min.css" rel="stylesheet">
+	<link href="vendor/range-slider/css/ion.rangeSlider.css" rel="stylesheet">
+	<link href="vendor/magnific-popup/css/magnific-popup.css" rel="stylesheet">
+	<link href="vendor/float-labels/css/float-labels.min.css" rel="stylesheet">
+
+	<!-- Main CSS -->
+	<link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<!-- Preloader -->
+	<div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div>
+	<!-- Preloader End -->
+
+	<!-- Page -->
+	<div id="page">
+		<!-- Header -->
+		<header class="main-header sticky">
+			<a href="#menu" class="btn-mobile">
+				<div class="hamburger hamburger--spin" id="hamburger">
+					<div class="hamburger-box">
+						<div class="hamburger-inner"></div>
+					</div>
+				</div>
+			</a>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-6">
+						<div id="logo">
+							<h1><a href="index.html" title="Costy">Costy</a></h1>
+						</div>
+					</div>
+					<div class="col-lg-9 col-6">
+						<ul id="menuIcons">
+							<li><a href="#"><i class="icon icon-support"></i></a></li>
+							<li><a href="#"><i class="icon icon-shopping-cart2"></i></a></li>
+						</ul>
+						<!-- Menu -->
+						<nav id="menu" class="main-menu">
+							<ul>
+								<li><span><a href="index.html">Home</a></span></li>
+								<li>
+									<span><a href="#">Calculators <i class="fa fa-chevron-down"></i></a></span>
+									<ul>
+										<li><a href="calculator-1.html">Demo 1 - More dropdowns</a></li>
+										<li><a href="calculator-2.html">Demo 2 - Single items</a></li>
+										<li><a href="calculator-3.html">Demo 3 - Single dropdown</a></li>
+										<li><a href="calculator-4.html">Demo 4 - Without submit</a></li>
+									</ul>
+								</li>
+								<li>
+									<span><a href="#">Extra Elements <i class="fa fa-chevron-down"></i></a></span>
+									<ul>
+										<li><a href="php/phpmailer/email.html" target="_blank">Email Confirmation</a></li>
+										<li>
+											<span><a href="#">PDF Summary</a></span>
+											<ul>
+												<li><a href="pdf/order-usd-left.pdf" target="_blank">USD on the left</a></li>
+												<li><a href="pdf/order-usd-right.pdf" target="_blank">USD on the right</a></li>
+												<li><a href="pdf/order-eur-spec-chars.pdf" target="_blank">EUR with spec.chars.</a></li>
+											</ul>
+										</li>
+										<li><a href="javascript:;" id="openSimpleMailSummaryImage">Simple Mail Summary</a></li>
+									</ul>
+								</li>
+								<li><span><a href="faq.html">Faq</a></span></li>
+								<li><span><a href="contacts.html">Contacts</a></span></li>
+							</ul>
+						</nav>
+						<!-- Menu End -->
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- Header End -->
+
+		<!-- Sub Header -->
+		<div class="sub-header">
+			<div class="container">
+				<h1>Calculator Demo 3</h1>
+			</div>
+		</div>
+		<!-- Sub Header End -->
+
+		<!-- Main -->
+		<main>
+			<!-- Order  -->
+			<div class="order">
+				<div class="container">
+					<!-- Form -->
+					<form method="POST" id="orderForm" name="orderForm" action="php/send_order_3_attached_pdf.php">
+						<div class="row">
+							<div class="col-lg-8" id="mainContent">
+								<!-- Calculator Area -->
+								<div id="optionGroup1" class="row option-box">
+									<span class="price-box-desc">From</span>
+									<div class="price-box"><sup>$</sup>2.50</div>
+									<div class="option-box-header">
+										<h3>Option Group 1</h3>
+										<p>
+											Subtitle or short description can be set here.
+											<a href="javascript:;" id="openGallery1" class="option-box-link">Gallery</a>
+										</p>
+									</div>
+									<div class="col-12">
+										<input type="hidden" id="option1Title" name="option1Title" value="Select" />
+										<input type="hidden" id="option1Price" name="option1Price" value="0" />
+										<select id="optionGroup1List" class="wide price-list" name="optionGroup1List">
+											<option value="0">Select</option>
+											<option value="1025.64">Option 1.1</option>
+											<option value="30.45">Option 1.2</option>
+											<option value="2.50">Option 1.3</option>
+										</select>
+									</div>
+								</div>
+								<div class="row option-box">
+									<div class="option-box-header">
+										<h3>Quantity Slider</h3>
+										<p>Subtitle or short description can be set here.</p>
+									</div>
+									<div class="col-12">
+										<div class="row">
+											<div class="col-md-10">
+												<input id="optionGroup1RangeSlider" type="text" value="" />
+											</div>
+											<div class="col-md-2">
+												<input id="optionGroup1Qty" type="text" class="qty-input form-control" name="optionGroup1Qty" value="0" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Calculator Area End -->
+								<!-- Personal Details -->
+								<div id="personalDetails" class="row contact-box">
+									<div class="contact-box-header">
+										<h3>Contact Details</h3>
+										<p>Please give VALID email to check the result.</p>
+									</div>
+									<div class="col-md-6 col-sm-6">
+										<div class="form-group">
+											<label for="userName">Full Name</label>
+											<input id="userName" class="form-control" name="username" type="text" data-parsley-pattern="^[a-zA-Z\s.]+$" required />
+										</div>
+									</div>
+									<div class="col-md-6 col-sm-6">
+										<div class="form-group">
+											<label for="email">Email</label>
+											<input id="email" class="form-control" name="email" type="email" required />
+										</div>
+									</div>
+									<div class="col-md-6 col-sm-6">
+										<div class="form-group">
+											<label for="phone">Phone e.g.: +12345</label>
+											<input id="phone" class="form-control" name="phone" type="text" data-parsley-pattern="^\+{1}[0-9]+$" />
+										</div>
+									</div>
+									<div class="col-md-6 col-sm-6">
+										<div class="form-group">
+											<label for="address">Address</label>
+											<input id="address" class="form-control" name="address" type="text" data-parsley-pattern="^[,.a-zA-Z0-9\s.]+$" />
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+											<label for="inputMessage">Message</label>
+											<textarea class="form-control" id="inputMessage" name="message" data-parsley-pattern="^[a-zA-Z0-9\s.:,!?']+$"></textarea>
+										</div>
+									</div>
+								</div>
+								<!-- Personal Details End -->
+							</div>
+							<div class="col-lg-4" id="sidebar">
+								<!-- Order Container -->
+								<div id="orderContainer" class="theiaStickySidebar">
+									<div class="row">
+										<div class="col-md-12">
+											<input type="hidden" id="subSum1" name="subSum1" value="0" />
+											<input type="hidden" id="subSum2" name="subSum2" value="0" />
+											<input type="hidden" id="subSum3" name="subSum3" value="0" />
+											<input type="hidden" id="totalDue" name="totalDue" value="0" />
+											<h3>Order Summary</h3>
+											<ul id="orderSumList">
+												<li id="optionGroup1Sum"></li>
+												<li id="optionGroup2Sum"></li>
+												<li id="optionGroup3Sum"></li>
+												<li id="extraOption1Sum"></li>
+												<li id="extraOption2Sum"></li>
+											</ul>
+											<div class="row total-container">
+												<div class="col-6 p-0">
+													<input type="text" id="totalTitle" class="summaryInput" name="totallabel" value="" disabled />
+												</div>
+												<div class="col-6 p-0">
+													<input type="text" id="total" class="summaryInput" name="total" value="0" data-parsley-errors-container="#totalError" data-parsley-empty-order=""
+														disabled />
+												</div>
+											</div>
+											<div id="totalError"></div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="form-group">
+												<input type="checkbox" id="cbx" class="inp-cbx" name="terms" value="yes" required />
+												<label class="cbx terms" for="cbx">
+													<span>
+														<svg width="12px" height="10px" viewbox="0 0 12 10">
+															<polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+														</svg>
+													</span>
+													<span>Accept<a href="pdf/terms.pdf" class="terms-link" target="_blank">Terms</a>.</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-12">
+											<button type="submit" name="submit" class="btn-form-func">
+												<span class="btn-form-func-content">SUBMIT</span>
+												<span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span>
+											</button>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-12">
+											<button type="button" name="reset" id="resetBtn" class="btn-form-func btn-form-func-alt-color">
+												<span class="btn-form-func-content">RESET</span>
+												<span class="icon"><i class="fa fa-times" aria-hidden="true"></i></span>
+											</button>
+										</div>
+									</div>
+									<div class="row footer">
+										<div class="col-lg-12 text-center">
+											<small>&copy; 2020 Your Company.</small>
+										</div>
+									</div>
+								</div>
+								<!-- Order Container End -->
+							</div>
+						</div>
+					</form>
+					<!-- Form End -->
+				</div>
+			</div>
+			<!-- Order End -->
+		</main>
+		<!-- Main End -->
+
+		<!-- Footer -->
+		<footer class="main-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<h5 class="footer-heading">Menu Links</h5>
+						<ul class="list-unstyled nav-links">
+							<li><i class="fas fa-angle-right"></i> <a href="index.html" class="footer-link">Home</a></li>
+							<li><i class="fas fa-angle-right"></i> <a href="faq.html" class="footer-link">FAQ</a></li>
+							<li><i class="fas fa-angle-right"></i> <a href="contacts.html" class="footer-link">Contacts</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<h5 class="footer-heading">Order Wizard</h5>
+						<ul class="list-unstyled nav-links">
+							<li><i class="fas fa-angle-right"></i> <a href="calculator-1.html" class="footer-link">Calculator Demo 1</a></li>
+							<li><i class="fas fa-angle-right"></i> <a href="calculator-2.html" class="footer-link">Calculator Demo 2</a></li>
+							<li><i class="fas fa-angle-right"></i> <a href="calculator-3.html" class="footer-link">Calculator Demo 3</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<h5 class="footer-heading">Contacts</h5>
+						<ul class="list-unstyled contact-links">
+							<li><i class="icon icon-map-marker"></i><a href="https://goo.gl/maps/vKgGyZe2JSRLDnYH6" class="footer-link" target="_blank">Address: 1234 Street Name, City Name, USA</a>
+							</li>
+							<li><i class="icon icon-envelope3"></i><a href="mailto:info@yourdomain.com" class="footer-link">Mail: info@yourdomain.com</a></li>
+							<li><i class="icon icon-phone2"></i><a href="tel:+3630123456789" class="footer-link">Phone: +3630123456789</a></li>
+						</ul>
+					</div>
+					<div class="col-md-2">
+						<h5 class="footer-heading">Follow Us</h5>
+						<ul class="list-unstyled social-links">
+							<li><a href="https://facebook.com" class="social-link" target="_blank"><i class="icon icon-facebook"></i></a></li>
+							<li><a href="https://twitter.com" class="social-link" target="_blank"><i class="icon icon-twitter"></i></a></li>
+							<li><a href="https://instagram.com" class="social-link" target="_blank"><i class="icon icon-instagram"></i></a></li>
+							<li><a href="https://pinterest.com" class="social-link" target="_blank"><i class="icon icon-pinterest"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-8">
+						<ul id="subFooterLinks">
+							<li><a href="https://themeforest.net/user/ultimatewebsolutions" target="_blank">With <i class="fa fa-heart pulse"></i> by UWS</a></li>
+							<li><a href="pdf/terms.pdf" target="_blank">Terms and conditions</a></li>
+							<li><a href="faq.html">Faq</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<div id="copy">© 2021 Costy</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- Footer End -->
+	</div>
+	<!-- Page End -->
+
+	<!-- Modal Popup Alert 1 -->
+	<div class="modal" id="alertModal1" tabindex="-1" role="dialog" aria-labelledby="alertModal1Title" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="alertModal1Title">Alert</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"><i class="icon icon-cross"></i></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Please select an item from <span class="alert-text-strong">Option Group 1</span> dropdown in
+						order to calculate with the quantity!</p>
+				</div>
+				<div class="modal-footer">
+					<button class="btn-modal" data-dismiss="modal" type="button">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Back to top button -->
+	<div id="toTop"><i class="fa fa-chevron-up"></i></div>
+
+	<!-- Vendor Javascript Files -->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="vendor/easing/js/easing.min.js"></script>
+	<script src="vendor/parsley/js/parsley.min.js"></script>
+	<script src="vendor/nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="vendor/range-slider/js/ion.rangeSlider.min.js"></script>
+	<script src="vendor/price-format/js/jquery.priceformat.min.js"></script>
+	<script src="vendor/theia-sticky-sidebar/js/ResizeSensor.min.js"></script>
+	<script src="vendor/theia-sticky-sidebar/js/theia-sticky-sidebar.min.js"></script>
+	<script src="vendor/mmenu/js/mmenu.min.js"></script>
+	<script src="vendor/magnific-popup/js/jquery.magnific-popup.min.js"></script>
+	<script src="vendor/float-labels/js/float-labels.min.js"></script>
+
+	<!-- Main Javascript File -->
+	<script src="js/scripts-3.js"></script>
+
+</body>
+
+</html>

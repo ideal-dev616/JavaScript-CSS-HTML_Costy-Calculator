@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Costy | Documentation v.2.1</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+    <link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="" crossorigin="anonymous"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+
+<body class="body-coral">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="https://ultimatewebsolutions.net/costy/intro/" target="_blank">
+                            <img class="img-fluid" src="assets/images/logo.png" alt="Costy Home" />
+                        </a>
+                    </h1>
+
+                </div>
+                <!--//branding-->
+
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">Cost Calculator and Order Wizard</li>
+                    <li class="breadcrumb-item active">v.2.1</li>
+                </ol>
+
+            </div>
+            <!--//container-->
+        </header>
+        <!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><i class="icon fas fa-book"></i> Documentation v.2.1</h1>
+                    <div class="meta"><i class="far fa-clock"></i> Created: 12-10-2020</div>
+                </div>
+                <!--//doc-header-->
+                <div class="doc-body row">
+                    <div class="doc-content col-md-9 col-12 order-1">
+                        <div class="content-inner">
+                            <section id="start" class="doc-section">
+                                <h2 class="section-title">Start</h2>
+                                <div class="section-block">
+                                    <ul class="list">
+                                        <li>Last update: 02-02-2021</li>
+                                        <li>By: Ultimate Websolutions</li>
+                                        <li>Web: <a href="https://ultimatewebsolutions.net/costy/home" target="_blank">Costy</a></li>
+                                        <li>Mail: <a href="mailto:info@ultimatewebsolutions.net">info@ultimatewebsolutions.net</a></li>
+                                    </ul>
+                                    <p>
+                                        Thank you for purchasing<strong> Costy</strong>.<br /><br />
+                                        We hope you will find all answers to your questions in this Documentation. <br />
+                                        However, if you still need support, please, go to your envato profile and
+                                        <a href="https://themeforest.net/user/ultimatewebsolutions#contact" target="_blank">use this form</a>
+                                        to send a message or drop us a line to mail address shown above.
+                                        We are happy to answer shortly.<br /><br /> We appreciate, if you will have few minutes for rating. Please log in to your codecanyon account and leave a rating
+                                        in your <a href="https://themeforest.net/downloads" target="_blank">Downloads</a> section. Many thanks!
+                                    </p>
+                                </div>
+                            </section>
+                            <!--//doc-section-->
+                            <section id="overview" class="doc-section">
+                                <h2 class="section-title">Overview</h2>
+                                <div class="section-block">
+                                    <p>
+                                        <strong>Costy</strong> is a multipurpose, 100% responsive, simple and clean cost calculator and order wizard built with HTML5, CSS3, jQuery using Bootstrap4.
+                                        With its PHP engine Costy is able to generate PDF summary about the order request which is sent in attachment by a nicely formatted email notification. Comes
+                                        with premade color variations and layouts.
+                                    </p>
+                                    <ul class="list">
+                                        <li>assets <i class="fas fa-long-arrow-alt-right"></i> contains icons and images for the order summary email template</li>
+                                        <li>html <i class="fas fa-long-arrow-alt-right"></i> main folder
+                                            <ul>
+                                                <li>css <i class="fas fa-long-arrow-alt-right"></i> folder of stylesheets</li>
+                                                <li>img <i class="fas fa-long-arrow-alt-right"></i> folder of images</li>
+                                                <li>js <i class="fas fa-long-arrow-alt-right"></i> folder of JavaScripts</li>
+                                                <li>pdf <i class="fas fa-long-arrow-alt-right"></i> folder of pdf files</li>
+                                                <li>php <i class="fas fa-long-arrow-alt-right"></i> folder of PHP scripts</li>
+                                                <li>vendor <i class="fas fa-long-arrow-alt-right"></i> folder of vendor styles and scripts</li>
+                                            </ul>
+                                        </li>
+                                        <li>documentation</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <!--//doc-section-->
+                            <section id="html-structure" class="doc-section">
+                                <h2 class="section-title">HTML structure</h2>
+                                <div class="section-block">
+                                    <p>The HTML structure is divided by separate areas shown below.</p>
+                                    <img class="img-fluid" src="assets/images/html-structure.png" alt="HTML structure" />
+                                </div>
+                                <!--//section-block-->
+                                <div id="html-structure-setup" class="section-block">
+                                    <h6>HTML structure setup</h6>
+                                    <p>If we setup our own titles and prices in the <strong>Calculator Area</strong> we have to focus on the values and names shown below. </p>
+                                    <img class="img-fluid" src="assets/images/html-structure-setup.png" alt="HTML structure setup" />
+                                </div>
+                                <!--//section-block-->
+                                <div id="html-email" class="section-block">
+                                    <h6>HTML structure of the email response</h6>
+                                    <p>The email template of the order summary can be found in <strong>php/mailer</strong> folder.
+                                        Now logo, hero image, icons, social icons set in the <strong>php/mailer/email.html</strong> are hosted on the author's server. Please find these assets in the
+                                        <strong>assets</strong> folder, upload them to your server and change the URLs in the <strong>php/mailer/email.html</strong> pointing to your domain.
+                                    </p>
+                                    <img class="img-fluid" src="assets/images/html-email.png" alt="HTML email structure" />
+                                </div>
+                                <!--//section-block-->
+                                <div id="html-form" class="section-block">
+                                    <h6>Allow special characters on the HTML form</h6>
+                                    <p>The input on the HTML form can be managed by patterns. You can allow or block special characters.
+                                        The following code can be found in index html files at the end of the input fields.
+                                        If you need special characters add them like in example below or simply delete the whole <strong>data-parsley-pattern="^[A-Za-z\s]+$"</strong> element.
+                                        Put or remove the <strong>"required"</strong> keyword at the end of the input tags if you want to manage the input field to be or not to be required.
+                                    </p>
+                                    <ul class="list">
+                                        <li>
+                                            <strong>data-parsley-pattern="^[ÁáÉéÍíÓóÖöŐőÚúÜüŰűA-Za-z\s]+$" required</strong> <i class="fas fa-long-arrow-alt-right"></i> input WITH special characters
+                                        </li>
+                                        <li><strong>data-parsley-pattern="^[A-Za-z\s]+$" required</strong> <i class="fas fa-long-arrow-alt-right"></i> input WITHOUT special characters</li>
+                                        <li><strong>data-parsley-pattern="^[A-Za-z\s]+$"</strong> <i class="fas fa-long-arrow-alt-right"></i> this input is NOT required input</li>
+                                    </ul>
+                                    <p>Other that that in <strong>send_order_1-2-3_attached_pdf.php</strong> depending on the layout you use, the followings have to be commented or deleted.
+                                    </p>
+                                    <div class="code-block">
+                                        <pre><code class="language-php">// After sanitization validation is performed
+$pattern_address = array('options'=>array('regexp'=>'/^[,.a-zA-Z0-9\s.]+$/'));
+$_POST['address'] = filter_var($_POST['address'], FILTER_VALIDATE_REGEXP, $pattern_address);
+</code></pre>
+                                    </div>
+                                    <!--//code-block-->
+                                </div>
+                                <!--//section-block-->
+                            </section>
+                            <!--//doc-section-->
+                            <section id="css-structure" class="doc-section">
+                                <h2 class="section-title">CSS structure</h2>
+                                <div class="section-block">
+                                    <p>CSS code which is responsible for the look and feel can be found in <strong>css</strong> folder. These files are containing the separate color variations:</p>
+                                    <ul class="list">
+                                        <li>style.css <i class="fas fa-long-arrow-alt-right"></i> Default style. Primary color: #ff7b79</li>
+                                        <li>style-aqua.css <i class="fas fa-long-arrow-alt-right"></i> Primary color: #1cbbb4</li>
+                                        <li>style-blue.css <i class="fas fa-long-arrow-alt-right"></i> Primary color: #64b5f6</li>
+                                        <li>style-green.css <i class="fas fa-long-arrow-alt-right"></i> Primary color: #02b843</li>
+                                    </ul>
+                                    <p>The structure is the same in css files above they only differ in primary color.</p>
+                                    <div class="code-block">
+                                        <pre><code class="language-css">/* ======= Costy Style Structure =======
+
+01. PRELOADER
+02. GENERAL
+03. HEADER
+04. SUB HEAEDR
+05. FOOTER
+06. HERO
+07. SERVICES
+08. FAQ
+09. MAP
+10. CONTAINERS
+11. FORM ELEMENTS
+12. ORDER SUMMARY
+13. BACK TO TOP
+14. SUCCESS SUBMIT
+15. RESPONSIVE
+
+================================= */</code></pre>
+                                    </div>
+                                    <!--//code-block-->
+                                </div>
+                                <!--//section-block-->
+                                <div id="change-color" class="section-block">
+                                    <h6>Change Color</h6>
+                                    <div class="code-block">
+                                        <p>If you want to change the primary color the following styles have to be changed.</p>
+                                        <pre><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;    
+    ...
+    /* ======= Main Style ======= */
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt; 
+&lt;/head&gt; 
+</code></pre>
+                                        <p>Below the default coral is changed to green.</p>
+                                        <pre><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;    
+    ...
+    /* ======= Main Style ======= */
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/style-green.css&quot;&gt; 
+&lt;/head&gt; 
+</code></pre>
+                                        <p>To have the same look and feel on submit you have to change the hexa color in the very bottom of all <strong>php/order_send.php</strong> files.</p>
+                                        <pre><code class="language-markup">
+...
+&lt;g fill=&quot;none&quot; stroke=&quot;#02b843&quot; stroke-width=&quot;2&quot;&gt;
+...
+                                            </code></pre>
+                                    </div>
+                                    <!--//code-block-->
+                                </div>
+                                <!--//section-block-->
+                                <div id="change-mobile-menu-color" class="section-block">
+                                    <h6>Change Mobile Menu Color</h6>
+                                    <p>If you want to change the mobile menu color (from dark to light) the following styles and scripts have to be changed.</p>
+                                    <p>1. At the very bottom of <strong>vendor/dmenu/css/menu.css</strong> use the code below</p>
+                                    <div class="code-block">
+                                        <pre><code class="language-css">
+/* Use this when using WHITE mobile menu */
+ul.mm-listview li a {
+    color: #333 !important;
+    display: block;
+}
+</code></pre>
+                                    </div>
+                                    <!--//code-block-->
+                                    <p>2. In <strong>js/scripts.js and scripts-2-3-4.js</strong> change "theme-dark" to <strong>"theme-white"</strong> at MOBILE MENU section.</p>
+                                    <div class="code-block">
+                                        <pre><code class="language-js">// =====================================================
+//      MOBILE MENU
+// =====================================================
+var $menu = $("nav#menu").mmenu({
+    "extensions": ["pagedim-black", "theme-dark"], // "theme-dark" can be changed to: "theme-white"
+    counters: true,
+    keyboardNavigation: {
+        enable: true,
+        enhance: true
+    },
+    navbar: {
+        title: 'MENU'
+    },
+    navbars: [{ position: 'bottom', content: ['<a href="#">© 2021 Costy</a>'] }]
+},
+</code></pre>
+                                    </div>
+                                    <!--//code-block-->
+                                </div>
+                                <!--//section-block-->
+                            </section>
+                            <!--//doc-section-->
+                            <section id="js-structure" class="doc-section">
+                                <h2 class="section-title">JavaScript structure</h2>
+                                <div class="section-block">
+                                    <p>JavaScript code which is responsible for functionality can be found in <strong>js</strong> folder.</p>
+                                    <ul class="list">
+                                        <li>redirect.js <i class="fas fa-long-arrow-alt-right"></i> for redirection after submit</li>
+                                        <li>scripts.js <i class="fas fa-long-arrow-alt-right"></i> for demo layout 1</li>
+                                        <li>scripts-2.js <i class="fas fa-long-arrow-alt-right"></i> for demo layout 2</li>
+                                        <li>scripts-3.js <i class="fas fa-long-arrow-alt-right"></i> for demo layout 3</li>
+                                        <li>scripts-4.js <i class="fas fa-long-arrow-alt-right"></i> for demo layout 4</li>
+                                    </ul>
+                                    <p>The main structure is the same in js files above they only differ in calculator logic.</p>
+                                    <div class="code-block">
+                                        <pre><code class="language-css">/* ======= Costy Scripts Structure =======
+
+01. PRELOADER
+02. BACK TO TOP BUTTON
+03. NAVBAR
+04. STICKY SIDEBAR SETUP
+05. MOBILE MENU
+06. FAQ NICE SCROLL
+07. FAQ ACCORDION
+08. GALLERY
+09. CALCULATOR ELEMENTS
+11. INIT DROPDOWNS
+12. RANGE SLIDER 1
+13. RANGE SLIDER 2
+14. RANGE SLIDER 3
+15. FORM INPUT VALIDATION
+
+================================= */</code></pre>
+                                    </div>
+                                    <!--//code-block-->
+                                </div>
+                                <!--//section-block-->
+                                <div id="change-currency" class="section-block">
+                                    <h6>Change currency</h6>
+                                    <p>If you want to change the currency you have to change the followings in scripts.js or scripts-2.js or scripts-3.js depending which layout do you use.
+                                        Change the '$' symbol to e.g.: 'EUR'. It means your prices will be formatted in the desired currency.
+                                    </p>
+                                    <div class="code-block">
+                                        <pre><code class="language-js">// =====================================================
+//      CALCULATOR ELEMENTS
+// =====================================================
+// Function to format item prices usign priceFormat plugin
+function formatItemPrice() {
+    $('.price').priceFormat({
+        prefix: '$ ',
+        centsSeparator: '.',
+        thousandsSeparator: ','
+    });
+}
+
+// Function to format total price usign priceFormat plugin
+function formatTotalPrice() {
+    $('#total').priceFormat({
+        prefix: '$ ',
+        centsSeparator: '.',
+        thousandsSeparator: ','
+    });
+}
+</code></pre>
+                                    </div>
+                                    <!--//code-block-->
+                                </div>
+                                <!--//section-block-->
+                                <div id="change-redirection" class="section-block">
+                                    <h6>Change redirection after submit</h6>
+                                    <p>Redirection after submit can be set in the <strong>js/redirect.js</strong> file. Please change the URL to your desired location.</p>
+                                    <div class="code-block">
+                                        <pre><code class="language-js">// Redirect
+function delayedRedirect()	{
+    window.location = 'https://your-domain-where-to-redirect.com'
+}
+</code></pre>
+                                    </div>
+                                    <!--//code-block-->
+                                </div>
+                                <!--//section-block-->
+                                <div id="change-range-slider" class="section-block">
+                                    <h6>Change range slider</h6>
+                                    <p>Range slider options can me modified in <strong>js/scripts.js</strong> or <strong>js/scripts-2.js</strong> or <strong>js/scripts-3.js</strong> file depending
+                                        which layout do you use. The followings are recommended only to be modified: <strong>min</strong> value, <strong>max</strong> value,
+                                        <strong>skin: 'flat'</strong> or <strong>skin: 'round'</strong>.
+                                    </p>
+                                    <div class="code-block">
+                                        <pre><code class="language-js">// =====================================================
+//      RANGE SLIDER 1
+// =====================================================
+var $range = $('#optionGroup1RangeSlider'),
+$input = $('#optionGroup1Qty'),
+instance,
+min = 1,
+max = 100;
+                                    
+$range.ionRangeSlider({
+skin: 'flat',
+...
+...
+from: 50,
+...
+</code></pre>
+                                    </div>
+                                    <!--//code-block-->
+                                </div>
+                                <!--//section-block-->
+                                <div id="setup-media-lightbox" class="section-block">
+                                    <h6>Setup Media Lightbox</h6>
+                                    <p>It is possible do open image, gallery or video related to an option group (calculator element). To change the already existing ones or create a new image,
+                                        gallery or video item,
+                                        see the code section below. It can be found in <strong>scripts.js, scripts-2.js, scripts-3.js</strong> and <strong>scripts-4.js</strong>.
+                                    </p>
+                                    <div class="callout-block callout-warning">
+                                        <div class="icon-holder">
+                                            <i class="fas fa-exclamation-triangle"></i>
+                                        </div>
+                                        <!--//icon-holder-->
+                                        <div class="content">
+                                            <h4 class="callout-title">NOTE</h4>
+                                            <p>
+                                                If your video is not loaded upload your code to a server.
+                                            </p>
+                                        </div>
+                                        <!--//content-->
+                                    </div>
+                                    <!--//callout-block-->
+                                    <div class="code-block">
+                                        <pre><code class="language-js">// =====================================================
+//      GALLERY
+// =====================================================
+// Single Image
+$('#openImage1').magnificPopup({
+    items: {
+        src: 'img/gallery/1.jpg',
+        title: 'Image related to Option Single 1'
+    },
+    ...
+});
+                                        
+// Single Video
+$('#openVideo1').magnificPopup({
+    items: {
+        src: 'https://vimeo.com/432854555'
+},
+    ...
+});
+                      
+// Image Gallery
+$('#openGallery1').magnificPopup({
+    items: [
+    {
+        src: 'img/gallery/1.jpg',
+        title: 'Image related to Option 1.1'
+    },
+    {
+        src: 'img/gallery/2.jpg',
+        title: 'Image related to Option 1.2'
+    },
+    {
+        src: 'img/gallery/3.jpg',
+        title: 'Image related to Option 1.3'
+    }
+    ],
+    ...    
+});
+</code></pre>
+                                    </div>
+                                    <!--//code-block-->
+                                </div>
+                                <!--//section-block-->
+                                <div id="setup-map" class="section-block">
+                                    <h6>Setup Map</h6>
+                                    <p>In order to use the map it is required to have Google Maps API KEY. Visit the following link to get started if you do not have an API KEY yet:
+                                        <a href="https://developers.google.com/maps/documentation/javascript/get-api-key#key" target="_blank">Get an API KEY</a>.
+                                        Some additional info how to <a href="http://thegrue.org/google-map-javascript-api-key/" target="_blank">create an API KEY</a>.
+                                        After you get the key set it in the following line in contacts.html at the very bottom of the page.
+                                    </p>
+                                    <div class="code-block">
+                                        <pre><code class="language-html"><!-- Map -->
+&lt;script src=&quot;https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&quot;&gt;&lt;/script&gt;
+</code></pre>
+                                    </div>
+                                    <!--//code-block-->
+                                    <div class="callout-block callout-warning">
+                                        <div class="icon-holder">
+                                            <i class="fas fa-exclamation-triangle"></i>
+                                        </div>
+                                        <!--//icon-holder-->
+                                        <div class="content">
+                                            <h4 class="callout-title">NOTE</h4>
+                                            <p>
+                                                If you set your API KEY and the map does not load locally: upload the code to your server.
+                                            </p>
+                                        </div>
+                                        <!--//content-->
+                                    </div>
+                                    <!--//callout-block-->
+                                    <p>
+                                        The map infobox details and your desired latitude and longitude map coordinates can be modified in <strong>js/map.js</strong> file in the following lines.
+                                        To find the proper coordinates visit: <a href=" https://www.latlong.net/" target="_blank">latlong.net</a>
+                                    </p>
+                                    <div class="code-block">
+                                        <pre><code class="language-js">
+markersData = {
+    'Marker': [
+        {
+            logoUrl: 'img/map/infoimg.png',
+            address: 'New York',
+            title: 'Costy Office',
+            mail: 'info@yourdomain.com',
+            phone: '+3630123456789',
+            latitude: 40.697149,
+            longitude: -74.259865
+        }
+    ]
+};
+...
+center: new google.maps.LatLng(40.697149, -74.259865),
+</code></pre>
+                                    </div>
+                                    <!--//code-block-->
+                                </div>
+                                <!--//section-block-->
+                            </section>
+                            <!--//doc-section-->
+                            <section id="php-structure" class="doc-section">
+                                <h2 class="section-title">PHP structure</h2>
+                                <div class="section-block">
+                                    <p>PHP code which is responsible for pdf generation and mail sending can be found in
+                                        <strong>php</strong> folder.
+                                    </p>
+                                    <ul class="list">
+                                        <li>send_order_1_attached_pdf.php <i class="fas fa-long-arrow-alt-right"></i> Sending PDF summary in attachment for demo layout 1</li>
+                                        <li>send_order_1_simple_mail.php <i class="fas fa-long-arrow-alt-right"></i> Sending simple mail summary for demo layout 1</li>
+                                        <li>send_order_2_attached_pdf.php <i class="fas fa-long-arrow-alt-right"></i> Sending PDF summary in attachment for demo layout 2</li>
+                                        <li>send_order_2_simple_mail.php <i class="fas fa-long-arrow-alt-right"></i> Sending simple mail summary for demo layout 2</li>
+                                        <li>send_order_3_attached_pdf.php <i class="fas fa-long-arrow-alt-right"></i> Sending PDF summary in attachment for demo layout 3</li>
+                                        <li>send_order_3_simple_mail.php <i class="fas fa-long-arrow-alt-right"></i> Sending simple mail summary for demo layout 3</li>
+                                    </ul>
+                                    <p>The structure is the same in php files above they only differ in pdf generation
+                                        logic based on different layouts.</p>
+                                    <div class="code-block">
+                                        <pre><code class="language-css">/* ======= PHP Scripts Structure =======
+
+01. SETUP
+02. VALIDATE USER INPUTS
+03. VALIDATE HIDDEN INPUTS
+04. ORDER GENERATION
+05. MAIL SENDING
+
+================================= */</code></pre>
+                                    </div>
+                                    <!--//code-block-->
+                                </div>
+                                <!--//section-block-->
+                                <div id="setup-pdf-summary" class="section-block">
+                                    <h6>Setup PDF summary</h6>
+                                    <p>Main content of PDF summary can be modified by changing some values in <strong>send_order_1_attached_pdf.php or send_order_2_attached_pdf.php or
+                                            send_order_3_attached_pdf.php</strong> depending on the layout you want to use.
+                                    </p>
+                                    <div class="callout-block callout-success">
+                                        <div class="icon-holder">
+                                            <i class="fas fa-check-circle"></i>
+                                        </div>
+                                        <!--//icon-holder-->
+                                        <div class="content">
+                                            <h4 class="callout-title">NOTE</h4>
+                                            <p>
+                                                This PDF generation supports multi language and special characters. Built up based on UTF-8.
+                                            </p>
+                                        </div>
+                                        <!--//content-->
+                                    </div>
+                                    <!--//callout-block-->
+                                    <p>At <strong>phpinvoice('purple','A4','$')</strong> The <strong>'$'</strong> symbol can be replaced with <strong>'&euro;', or with
+                                            text 'EUR' or with 'CHF'</strong> etc. with your desired currency.
+                                    </p>
+                                    <div class="code-block">
+                                        <pre><code class="language-php">/* Setup
+==================================== */
+                                           
+$order = new phpinvoice('purple','A4', '$');
+...
+$default_option = 'Select';
+
+// Setup Seller Details
+$seller_name = 'Seller Name';
+$seller_address = '123 Juanita Ave, Glendora, CA 91740, USA';
+$seller_notice = 'Contact data';
+$seller_company_name = 'Your Company';
+</code></pre>
+                                    </div>
+                                    <!--//code-block-->
+                                    <p>If you want to display currency on the right side on the pdf change: <br />
+                                        <strong>$curreny_direction = "left"</strong> to <strong>$curreny_direction =
+                                            "right"</strong> in the very top of the
+                                        <strong>php\phpinvoice\phpinvoice.php</strong>
+                                    </p>
+                                </div>
+                                <!--//section-block-->
+                                <div id="change-pdf-summary" class="section-block">
+                                    <h6>Change PDF summary</h6>
+                                    <p>In the <strong>Order Generation</strong> section of <strong>send_order_1-2-3_attached_pdf.php files</strong>
+                                        you can set your logo, and the reference (now it is 'ORDER').
+                                        Here you can also set description of extra options if you use
+                                        them. Below the '1' is the quantity and '50' is the price of the extra option. So after you
+                                        setup your extra option values in your HTML file you have to update these in the
+                                        send_order_1-2-3_attached_pdf.php too depending on the layout you use. If you use calculator-2.html you have to update send_order_2_attached_pdf.php etc.
+                                        If you set VAT at every item in % e.g.: '20%' instead of '0%', the prices will be calculated accordingly.
+                                    </p>
+                                    <div class="code-block">
+                                        <pre><code class="language-php">/* Order Generation
+==================================== */
+                                           
+// Header Settings
+$order->setLogo('phpinvoice/templates/purple/logo.png');
+$order->setReference('ORDER-'.$timestamp);
+...
+// Add Items (name, description, amount, vat, price, discount)
+if ($selected_option1_title !== $default_option) {
+    $order->addItem($selected_option1_title, '', $option1_qty, "0%", $selected_option1_price, false);
+}
+...
+// Add Extra Items (name, description, amount, vat, price, discount)
+if (isset($extra_option_1)) {
+    $order->addItem($extra_option_1_title, 'Extra Option 1 description', 1, "0%", 50, false);
+}
+...
+</code></pre>
+                                    </div>
+                                    <!--//code-block-->
+                                    <p>Addig totals is handled by the script however you can extend the total calculation with Shipment. To do so, set 'Shipment' and 'Grand Total'.
+                                        The '100' is the price of the shipment in this example. The final price will be calculated considering the shipment price.
+                                    </p>
+                                    <div class="code-block">
+                                        <pre><code class="language-php">                                           
+// Add Totals
+$order->addTotal('Sub Total', $order->items_total);  	
+$order->addTotal('Shipment', '100');
+$order->addTotal('Grand Total', $order->GetGrandTotal());
+</code></pre>
+                                    </div>
+                                    <!--//code-block-->
+                                    <p>In line below you can set a link in the footer of the PDF.
+                                    </p>
+                                    <div class="code-block">
+                                        <pre><code class="language-php">
+...                                        
+// Set footer note
+$order->setFooternote('Pay online at &lt;a href=&quot;http://paypal.com/&quot; target=&quot;_blank&quot;&gt;PayPal&lt;/a&gt;');
+</code></pre>
+                                    </div>
+                                    <!--//code-block-->
+                                </div>
+                                <!--//section-block-->
+                                <div id="change-mail-sending" class="section-block">
+                                    <h6>Change mail sending</h6>
+                                    <p>In order to change the mail sending you have to set the items below in
+                                        <strong>send_order_1-2-3_attached_pdf.php files</strong> depending on layout you use.
+                                    </p>
+                                    <div class="code-block">
+                                        <pre><code class="language-php">/* Mail Sending
+==================================== */
+                                           
+// Set Sender	
+$mail->setFrom('noreply@yourdomain.com', 'Costy');
+
+// Set Reply-to Address	
+$mail->addReplyTo('replyto@yourdomain.com', 'Costy');
+
+// Set Recipients	
+$mail->addAddress('websolutions.ultimate@gmail.com', 'Ultimate Websolutions');
+...
+
+// Set Subject
+$mail->Subject = 'Order Request from Costy';
+
+</code></pre>
+                                        <div class="code-block">
+                                            <p>If you want to send and get emails only with text without nicely
+                                                formatted layout please use code under <strong>Text Content
+                                                    Only</strong> part and comment out
+                                                the content under <strong>Set HTML Content</strong> part like shown
+                                                below.</p>
+                                            <pre><code class="language-php">/* Mail Sending
+==================================== */
+       
+// Set HTML Content	
+//$body = str_replace(array('customerName'),array($customer_name),$email_html);
+//$mail->MsgHTML($body);
+
+// Text Content Only
+$mail->isHTML(true);
+$mail->Body = 'Dear &lt;b&gt;'.$customer_name.'&lt;/b&gt;, &lt;br/&gt;&lt;br/&gt;your text goes here.&lt;/b&gt;'.'&lt;br/&gt;&lt;br/&gt;';
+</code></pre>
+
+                                        </div>
+                                        <!--//code-block-->
+                                    </div>
+                                    <!--//code-block-->
+                                </div>
+                                <!--//section-block-->
+                                <div id="use-simple-mail-summary" class="section-block">
+                                    <h6>Use simple mail summary</h6>
+                                    <p>In order to change the mail sending from PDF summary to simple mail summary you have to set the appropriate file in HTML:
+                                        <strong>send_order_1_attached.php</strong> has to be changed to <strong>send_order_1_simple_mail.php</strong> if you are using Demo1.
+                                    </p>
+                                    <img class="img-fluid" src="assets/images/use-simple-mail.png" alt="Use simple mail summary" />
+                                </div>
+                                <!--//section-block-->
+                            </section>
+                            <!--//doc-section-->
+                            <section id="sources-credits-updates-section" class="doc-section">
+                                <h2 class="section-title">Sources and Credits</h2>
+                                <div class="section-block">
+                                    <p>
+                                        We've used the following images, icons or other files, sources as listed.
+                                    </p>
+                                    <ul class="list">
+                                        <li><a href="https://github.com/gdsmith/jquery.easing" target="_blank">Easing</a></li>
+                                        <li><a href="https://fontawesome.com/" target="_blank">Font Awesome</a></li>
+                                        <li><a href="http://parsleyjs.org/" target="_blank">Form Validation</a></li>
+                                        <li><a href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" target="_blank">Google Font Poppins</a></li>
+                                        <li><a href="https://fonts.googleapis.com/css?family=Karla:300,400,500,600,700" target="_blank">Google Font Karla</a></li>
+                                        <li><a href="https://jonsuh.com/hamburgers" target="_blank">Hamburgers</a></li>
+                                        <li><a href="https://icomoon.io/" target="_blank">Icon Fonts</a></li>
+                                        <li><a href="https://dimsemenov.com/plugins/magnific-popup/" target="_blank">Magnific Popup</a></li>
+                                        <li><a href="https://mmenujs.com/" target="_blank">MMenu</a></li>
+                                        <li><a href="https://hernansartorio.com/jquery-nice-select/" target="_blank">Nice Select</a></li>
+                                        <li><a href="https://github.com/farjadtahir/pdf-invoicr" target="_blank">PDF Invoicer</a></li>
+                                        <li><a href="https://github.com/price-format/Jquery-Price-Format" target="_blank">Price Format</a></li>
+                                        <li><a href="http://ionden.com/a/plugins/ion.rangeSlider/index.html" target="_blank">Range Slider</a></li>
+                                        <li><a href="https://github.com/WeCodePixels/theia-sticky-sidebar" target="_blank">Thicky Sidebar</a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="section-title">Updates</h2>
+                                <div class="section-block">
+                                    <p>Version 2.1 <i class="fas fa-long-arrow-alt-right"></i> 02-02-2021</p>
+                                    <ul class="list">
+                                        <li>Added nice animation when filling the form</li>
+                                        <li>Added simple mail summary without pdf</li>
+                                        <li>Added Calculator Demo 4</li>
+                                    </ul>
+                                    <p>Version 2.0 <i class="fas fa-long-arrow-alt-right"></i> 12-10-2020</p>
+                                    <ul class="list">
+                                        <li>Whole refactor of the site.</li>
+                                        <li>Added new desktop and mobile menu system.</li>
+                                        <li>Restructured the calculator components and all pages.</li>
+                                        <li>Added new calculator elements such as quantity sliders, checkboxes and dropdown lists.</li>
+                                        <li>Added extra elements like PDF generation about the summary and formatted email notification.</li>
+                                    </ul>
+                                    <p>Version 1.0 <i class="fas fa-long-arrow-alt-right"></i> 25-03-2019</p>
+                                    <ul class="list">
+                                        <li>Initial release</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <!--//doc-section-->
+                        </div>
+                        <!--//content-inner-->
+                    </div>
+                    <!--//doc-content-->
+                    <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                        <div id="doc-nav" class="doc-nav">
+
+                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+                                <a class="nav-link scrollto" href="#header">Start</a>
+                                <a class="nav-link scrollto" href="#overview">Overview</a>
+                                <a class="nav-link scrollto" href="#html-structure">HTML structure</a>
+                                <nav class="doc-sub-menu nav flex-column">
+                                    <a class="nav-link scrollto" href="#html-structure-setup">HTML structure setup</a>
+                                    <a class="nav-link scrollto" href="#html-email">HTML structure of the email response</a>
+                                    <a class="nav-link scrollto" href="#html-form">Allow special characters on the form</a>
+                                </nav>
+                                <!--//nav-->
+                                <a class="nav-link scrollto" href="#css-structure">CSS structure</a>
+                                <nav class="doc-sub-menu nav flex-column">
+                                    <a class="nav-link scrollto" href="#change-color">Change color</a>
+                                    <a class="nav-link scrollto" href="#change-mobile-menu-color">Change mobile menu color</a>
+                                </nav>
+                                <!--//nav-->
+                                <a class="nav-link scrollto" href="#js-structure">JavaScript structure</a>
+                                <nav class="doc-sub-menu nav flex-column">
+                                    <a class="nav-link scrollto" href="#change-currency">Change currency</a>
+                                    <a class="nav-link scrollto" href="#change-redirection">Change redirection after submit</a>
+                                    <a class="nav-link scrollto" href="#change-range-slider">Change range slider</a>
+                                    <a class="nav-link scrollto" href="#setup-media-lightbox">Setup media lightbox</a>
+                                    <a class="nav-link scrollto" href="#setup-map">Setup map</a>
+                                </nav>
+                                <!--//nav-->
+                                <a class="nav-link scrollto" href="#php-structure">PHP structure</a>
+                                <nav class="doc-sub-menu nav flex-column">
+                                    <a class="nav-link scrollto" href="#setup-pdf-summary">Setup PDF summary</a>
+                                    <a class="nav-link scrollto" href="#change-pdf-summary">Change PDF summary</a>
+                                    <a class="nav-link scrollto" href="#change-mail-sending">Change mail sending</a>
+                                    <a class="nav-link scrollto" href="#use-simple-mail-summary">Use simple mail summary</a>
+                                </nav>
+                                <!--//nav-->
+                                <a class="nav-link scrollto" href="#sources-credits-updates-section">Sources, credits and updates</a>
+                            </nav>
+                            <!--//doc-menu-->
+
+                        </div>
+                    </div>
+                    <!--//doc-sidebar-->
+                </div>
+                <!--//doc-body-->
+            </div>
+            <!--//container-->
+        </div>
+        <!--//doc-wrapper-->
+
+    </div>
+    <!--//page-wrapper-->
+
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">
+                &copy; Documentation designed by <a href="https://themes.3rdwavemedia.com/" target="_blank">themes.3rdwavemedia.com</a>.
+                Content by <a href="https://themeforest.net/user/ultimatewebsolutions" target="_blank">UWS</a>.
+            </small>
+
+        </div>
+        <!--//container-->
+    </footer>
+    <!--//footer-->
+
+
+    <!-- Main Javascript -->
+    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/prism/prism.min.js"></script>
+    <script src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script src="assets/plugins/stickyfill/stickyfill.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

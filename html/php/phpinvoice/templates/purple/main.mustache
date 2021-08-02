@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>PHP INVOICE</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<style type="text/css">		
+		@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&subset=latin,latin-ext");
+		html, body, div, span, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td,
+		article, aside, canvas, details, embed,
+		figure, figcaption, footer, header, hgroup,
+		menu, nav, output, ruby, section, summary,
+		time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font: inherit;
+			font-size: 100%;
+			vertical-align: baseline;
+		}
+
+		html {
+			line-height: 1;
+		}
+
+		ol, ul {
+			list-style: none;
+		}
+
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+
+		caption, th, td {
+			text-align: left;
+			font-weight: normal;
+			vertical-align: middle;
+		}
+
+		q, blockquote {
+			quotes: none;
+		}
+		q:before, q:after, blockquote:before, blockquote:after {
+			content: "";
+			content: none;
+		}
+
+		a img {
+			border: none;
+		}
+
+		article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+			display: block;
+		}
+
+		body {
+			font-family: 'Courier Prime', monospace;
+			font-size: 12px;
+			font-weight: 400;
+			margin: 0;
+			padding: 0;
+			color: #000000;
+		}
+		body a {
+			text-decoration: underline;
+			color: #3f4079;			
+		}
+		body a:hover {
+			color: inherit;
+			opacity: 0.7;
+		}
+		body .container {
+			margin: 0 auto;
+			padding: 0;
+		}
+		body .clearfix:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+		body .left {
+			float: left;
+		}
+		body .right {
+			float: right;
+		}
+		body .helper {
+			height: 100%;
+		}
+
+		header {
+			height: 40px;
+			margin-top: 20px;
+			margin-bottom: 40px;
+			padding: 0px 5px 0;
+		}
+		header figure {
+			float: right;
+			width: 220px;
+		}
+		header figure img {
+			max-width:100%;
+		}
+		header .company-info {
+			color: #000000;			
+			font-size: 14px;
+			padding-top: 15px;			
+		}
+		section .details {
+            margin-bottom: 40px;
+            padding: 10px 35px;
+            background-color: #F3F3F3;
+            color: #000000;
+        }
+		section .details .client {
+			width: 50%;
+			line-height: 16px;
+		}
+		section .details .client .name {
+			font-weight: 600;
+		}
+		section .details .data {
+			width: 50%;
+			text-align: right;
+		}
+		section .details .title {
+			margin-bottom: 15px;			
+			font-size: 18px;
+			font-weight: 400;
+			text-transform: uppercase;
+		}
+		section .table-wrapper {
+			position: relative;
+			overflow: hidden;
+		}
+		section .no-break {
+			page-break-inside: avoid;
+		}
+		section table {
+			width: 100%;
+			margin-bottom: -20px;
+			table-layout: fixed;
+			border-collapse: separate;
+			border-spacing: 5px 5px;
+		}
+		section table .desc {
+			width: 40%;
+			text-align: left;
+			padding-left: 10p;
+		}
+		section table .qty,
+		section table .vat, {
+			width: 10%;
+		}		
+		section table .unit, 
+		section table .total {
+			width: 20%;
+		}
+		section table .total {
+			text-align: right;
+			padding-right: 10px;
+		}
+		section table tbody.head {
+			vertical-align: middle;
+			border-color: inherit;
+		}
+		section table tbody.head th {
+			text-align: center;
+			color: #ffffff;
+			font-weight: 600;
+			text-transform: uppercase;
+			background: #3f4079;
+			padding: 6px 0;
+		}
+		section table tbody.head th:first-child {
+			background: transparent;
+		}
+		
+		
+		section table tbody.body td {
+			padding: 10px 5px;
+			background: #F3F3F3;
+			text-align: center;
+		}
+		section table tbody.body h3 {
+			margin-bottom: 5px;
+			color: #3f4079;
+			font-weight: 600;
+		}
+		section table tbody.body .no {
+			padding: 0px;
+			background-color: #3f4079;
+			color: #ffffff;
+			font-size: 1.66666666666667em;
+			font-weight: 600;
+			line-height: 50px;
+		}
+		section table tbody.body .desc {
+			padding-top: 0;
+			padding-bottom: 0;			
+			color: #000000;
+			text-align: left;
+			background: #F3F3F3;
+		}
+		section table tbody.body .total {
+			color: #3f4079;
+			font-weight: 600;
+		}
+		section table tbody.body tr.total td {
+			padding: 5px 10px;
+			background-color: transparent;
+			border: none;
+			color: #777777;
+			text-align: right;
+		}
+		section table tbody.body tr.total .empty {
+			background: white;
+		}
+		section table tbody.body tr.total .total {
+			font-size: 1.18181818181818em;
+			font-weight: 600;
+			color: #3f4079;
+		}
+		
+		section .grand-total td {
+			padding:5px 10px;
+			background-color: #3f4079;
+			color: #ffffff;
+			font-weight: 400;
+			text-align: right;
+		}
+		section .grand-total td.wide-cell {
+			background-color: transparent;
+		}
+
+		footer {
+			margin-bottom: 20px;
+			padding: 0 5px;
+		}		
+		footer .notice {						
+			padding-top: 50px;
+			margin-bottom: 50px;
+			font-size:12px;
+			font-style: italic;
+		}
+		.invoice_to {
+			font-size:18px;
+			margin-bottom:10px;
+			text-transform: uppercase;
+		}
+	</style>
+</head>
+<body>
+	<header class="clearfix">
+		<div class="container">
+			<figure>
+				<img alt="logo" id="logo" src="{{logo}}" width="270" />
+			</figure>
+			<div class="company-info">
+				{{# from }}
+					{{{.}}}<br>
+				{{/ from }}
+			</div>
+		</div>
+	</header>
+
+	<section>
+		<div class="details clearfix">
+			<div class="client left">
+				<p class="invoice_to">Requested by:</p>
+				{{# to }}
+					<p>{{{.}}}</p>
+				{{/ to }}
+			</div>
+			<div class="data right">
+				<div class="title">{{reference}}</div>
+				<div class="date">
+					Date: {{invoice_date}}					
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="table-wrapper">
+				<table>
+					<tbody class="head">
+						<tr>
+							<th class="desc">Description</th>
+							<th class="qty">QTY</th>
+							<th class="vat">VAT</th>							
+							<th class="unit">Price</th>	
+							<th class="week">Week</th>						
+							<th class="total">Total</th>
+						</tr>
+					</tbody>
+					<tbody class="body">
+						{{# items }}
+							<tr>
+								<td class="desc">
+									{{{item}}} <br /> <em>{{{description}}}</em>
+								</td>
+								<td class="qty">{{quantity}}</td>
+								<td class="vat">{{vat}}</td>								
+								<td class="unit">{{price}}</td>	
+								<td class="week">{{week}}</td>								
+								<td class="total">{{total}}</td>
+							</tr>
+						{{/ items }}
+					</tbody>
+					<tfoot class="grand-total">
+						{{# totals }}
+							<tr>
+								<td colspan="1" class="wide-cell"></td>
+								<td colspan="2" class="unit"><strong>{{name}}</strong></td>
+								<td colspan="3" class="total">{{value}}</td>
+							</tr>
+						{{/ totals }}
+                    </tfoot>
+				</table>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">			
+			<div class="notice">
+				{{# footer_details }}
+					{{{.}}}
+				{{/ footer_details }}
+			</div>
+		</div>
+	</footer>
+
+</body>
+
+</html>
